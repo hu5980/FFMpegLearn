@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#include <libavcodec/avcodec.h>
 @interface ViewController ()
 
 @end
