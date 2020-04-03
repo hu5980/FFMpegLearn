@@ -7,16 +7,25 @@
 //
 
 #import "ViewController.h"
-#include <libavcodec/avcodec.h>
+#import "DecodeClass.h"
+#import "KxMovieViewController.h"
 @interface ViewController ()
-
+@property (nonatomic,strong)KxMovieViewController *vc;
+@property (nonatomic,strong)NSString *h264_videoPath;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.h264_videoPath = [[NSBundle mainBundle] pathForResource:@"test_1" ofType:@"webm"];
+    //    [DecodeClass getAllDecoderEncoder];
+    //    [DecodeClass ffmpegOpenFile:h264_videoPath];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    self.vc = [KxMovieViewController movieViewControllerWithContentPath:self.h264_videoPath parameters:nil];
+    [self presentViewController:self.vc animated:YES completion:nil];
 }
 
 

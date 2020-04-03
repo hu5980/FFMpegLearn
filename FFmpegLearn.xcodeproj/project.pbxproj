@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D669A4C24375FB10014DCE6 /* KxMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D669A4124375FB10014DCE6 /* KxMovieViewController.m */; };
+		8D669A4D24375FB10014DCE6 /* KxMovieGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D669A4324375FB10014DCE6 /* KxMovieGLView.m */; };
+		8D669A4E24375FB10014DCE6 /* kxmovie.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D669A4524375FB10014DCE6 /* kxmovie.bundle */; };
+		8D669A4F24375FB10014DCE6 /* KxAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D669A4624375FB10014DCE6 /* KxAudioManager.m */; };
+		8D669A5024375FB10014DCE6 /* KxMovieDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D669A4A24375FB10014DCE6 /* KxMovieDecoder.m */; };
+		8D669A54243761F20014DCE6 /* test_1.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D669A51243761F20014DCE6 /* test_1.webm */; };
+		8D669A55243761F20014DCE6 /* test_1.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D669A52243761F20014DCE6 /* test_1.hevc */; };
+		8D669A56243761F20014DCE6 /* test_1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D669A53243761F20014DCE6 /* test_1.mp4 */; };
 		8D6EDE4C242FAE9000608E89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6EDE4B242FAE9000608E89 /* AppDelegate.m */; };
 		8D6EDE4F242FAE9000608E89 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6EDE4E242FAE9000608E89 /* SceneDelegate.m */; };
 		8D6EDE52242FAE9000608E89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6EDE51242FAE9000608E89 /* ViewController.m */; };
@@ -27,9 +35,26 @@
 		8D6EDEF4242FB1EE00608E89 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6EDEF3242FB1ED00608E89 /* CoreMedia.framework */; };
 		8D6EDEF6242FB1F900608E89 /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6EDEF5242FB1F900608E89 /* libz.1.1.3.tbd */; };
 		8D6EDEF8242FB20000608E89 /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6EDEF7242FB20000608E89 /* libiconv.2.4.0.tbd */; };
+		8D991B21243091D400152CB0 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D991B20243091D300152CB0 /* libbz2.tbd */; };
+		8D991B2424309A7100152CB0 /* 1080_h264.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D991B2324309A7100152CB0 /* 1080_h264.mp4 */; };
+		8DD326B1243069D90088D217 /* DecodeClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD326B0243069D90088D217 /* DecodeClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D669A4124375FB10014DCE6 /* KxMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieViewController.m; sourceTree = "<group>"; };
+		8D669A4224375FB10014DCE6 /* KxMovieDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieDecoder.h; sourceTree = "<group>"; };
+		8D669A4324375FB10014DCE6 /* KxMovieGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieGLView.m; sourceTree = "<group>"; };
+		8D669A4424375FB10014DCE6 /* KxLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxLogger.h; sourceTree = "<group>"; };
+		8D669A4524375FB10014DCE6 /* kxmovie.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = kxmovie.bundle; sourceTree = "<group>"; };
+		8D669A4624375FB10014DCE6 /* KxAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxAudioManager.m; sourceTree = "<group>"; };
+		8D669A4724375FB10014DCE6 /* kxmovie-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "kxmovie-Prefix.pch"; sourceTree = "<group>"; };
+		8D669A4824375FB10014DCE6 /* KxMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieViewController.h; sourceTree = "<group>"; };
+		8D669A4924375FB10014DCE6 /* KxMovieGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieGLView.h; sourceTree = "<group>"; };
+		8D669A4A24375FB10014DCE6 /* KxMovieDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieDecoder.m; sourceTree = "<group>"; };
+		8D669A4B24375FB10014DCE6 /* KxAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxAudioManager.h; sourceTree = "<group>"; };
+		8D669A51243761F20014DCE6 /* test_1.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_1.webm; sourceTree = "<group>"; };
+		8D669A52243761F20014DCE6 /* test_1.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_1.hevc; sourceTree = "<group>"; };
+		8D669A53243761F20014DCE6 /* test_1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_1.mp4; sourceTree = "<group>"; };
 		8D6EDE47242FAE9000608E89 /* FFmpegLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFmpegLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6EDE4A242FAE9000608E89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D6EDE4B242FAE9000608E89 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -168,6 +193,11 @@
 		8D6EDEF3242FB1ED00608E89 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		8D6EDEF5242FB1F900608E89 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
 		8D6EDEF7242FB20000608E89 /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
+		8D991B1E243091A900152CB0 /* libbz2.1.0.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.5.tbd; path = usr/lib/libbz2.1.0.5.tbd; sourceTree = SDKROOT; };
+		8D991B20243091D300152CB0 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		8D991B2324309A7100152CB0 /* 1080_h264.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1080_h264.mp4; sourceTree = "<group>"; };
+		8DD326AF243069D90088D217 /* DecodeClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecodeClass.h; sourceTree = "<group>"; };
+		8DD326B0243069D90088D217 /* DecodeClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DecodeClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D991B21243091D400152CB0 /* libbz2.tbd in Frameworks */,
 				8D6EDEF8242FB20000608E89 /* libiconv.2.4.0.tbd in Frameworks */,
 				8D6EDEF6242FB1F900608E89 /* libz.1.1.3.tbd in Frameworks */,
 				8D6EDEF4242FB1EE00608E89 /* CoreMedia.framework in Frameworks */,
@@ -194,6 +225,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D669A4024375FB00014DCE6 /* kxmovie */ = {
+			isa = PBXGroup;
+			children = (
+				8D669A4124375FB10014DCE6 /* KxMovieViewController.m */,
+				8D669A4224375FB10014DCE6 /* KxMovieDecoder.h */,
+				8D669A4324375FB10014DCE6 /* KxMovieGLView.m */,
+				8D669A4424375FB10014DCE6 /* KxLogger.h */,
+				8D669A4524375FB10014DCE6 /* kxmovie.bundle */,
+				8D669A4624375FB10014DCE6 /* KxAudioManager.m */,
+				8D669A4724375FB10014DCE6 /* kxmovie-Prefix.pch */,
+				8D669A4824375FB10014DCE6 /* KxMovieViewController.h */,
+				8D669A4924375FB10014DCE6 /* KxMovieGLView.h */,
+				8D669A4A24375FB10014DCE6 /* KxMovieDecoder.m */,
+				8D669A4B24375FB10014DCE6 /* KxAudioManager.h */,
+			);
+			path = kxmovie;
+			sourceTree = "<group>";
+		};
 		8D6EDE3E242FAE9000608E89 = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +263,8 @@
 		8D6EDE49242FAE9000608E89 /* FFmpegLearn */ = {
 			isa = PBXGroup;
 			children = (
+				8D669A4024375FB00014DCE6 /* kxmovie */,
+				8D991B2224309A0F00152CB0 /* Res */,
 				8D6EDE63242FB0AE00608E89 /* FFmpeg-iOS */,
 				8D6EDE4A242FAE9000608E89 /* AppDelegate.h */,
 				8D6EDE4B242FAE9000608E89 /* AppDelegate.m */,
@@ -221,6 +272,8 @@
 				8D6EDE4E242FAE9000608E89 /* SceneDelegate.m */,
 				8D6EDE50242FAE9000608E89 /* ViewController.h */,
 				8D6EDE51242FAE9000608E89 /* ViewController.m */,
+				8DD326AF243069D90088D217 /* DecodeClass.h */,
+				8DD326B0243069D90088D217 /* DecodeClass.m */,
 				8D6EDE53242FAE9000608E89 /* Main.storyboard */,
 				8D6EDE56242FAE9100608E89 /* Assets.xcassets */,
 				8D6EDE58242FAE9100608E89 /* LaunchScreen.storyboard */,
@@ -432,6 +485,8 @@
 		8D6EDEEC242FB1D100608E89 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D991B20243091D300152CB0 /* libbz2.tbd */,
+				8D991B1E243091A900152CB0 /* libbz2.1.0.5.tbd */,
 				8D6EDEF7242FB20000608E89 /* libiconv.2.4.0.tbd */,
 				8D6EDEF5242FB1F900608E89 /* libz.1.1.3.tbd */,
 				8D6EDEF3242FB1ED00608E89 /* CoreMedia.framework */,
@@ -440,6 +495,17 @@
 				8D6EDEED242FB1D100608E89 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D991B2224309A0F00152CB0 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				8D991B2324309A7100152CB0 /* 1080_h264.mp4 */,
+				8D669A52243761F20014DCE6 /* test_1.hevc */,
+				8D669A53243761F20014DCE6 /* test_1.mp4 */,
+				8D669A51243761F20014DCE6 /* test_1.webm */,
+			);
+			path = Res;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -499,8 +565,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D991B2424309A7100152CB0 /* 1080_h264.mp4 in Resources */,
+				8D669A56243761F20014DCE6 /* test_1.mp4 in Resources */,
+				8D669A4E24375FB10014DCE6 /* kxmovie.bundle in Resources */,
 				8D6EDE5A242FAE9100608E89 /* LaunchScreen.storyboard in Resources */,
+				8D669A55243761F20014DCE6 /* test_1.hevc in Resources */,
 				8D6EDE57242FAE9100608E89 /* Assets.xcassets in Resources */,
+				8D669A54243761F20014DCE6 /* test_1.webm in Resources */,
 				8D6EDE55242FAE9000608E89 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,8 +583,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D669A4C24375FB10014DCE6 /* KxMovieViewController.m in Sources */,
+				8D669A5024375FB10014DCE6 /* KxMovieDecoder.m in Sources */,
 				8D6EDE52242FAE9000608E89 /* ViewController.m in Sources */,
+				8DD326B1243069D90088D217 /* DecodeClass.m in Sources */,
+				8D669A4F24375FB10014DCE6 /* KxAudioManager.m in Sources */,
 				8D6EDE4C242FAE9000608E89 /* AppDelegate.m in Sources */,
+				8D669A4D24375FB10014DCE6 /* KxMovieGLView.m in Sources */,
 				8D6EDE5D242FAE9100608E89 /* main.m in Sources */,
 				8D6EDE4F242FAE9000608E89 /* SceneDelegate.m in Sources */,
 			);
@@ -658,7 +734,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 44Y45LLDSP;
+				DEVELOPMENT_TEAM = GZG7SDL9U6;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/FFmpegLearn/FFmpeg-iOS/include";
 				INFOPLIST_FILE = FFMpegLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -680,7 +756,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 44Y45LLDSP;
+				DEVELOPMENT_TEAM = GZG7SDL9U6;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/FFmpegLearn/FFmpeg-iOS/include";
 				INFOPLIST_FILE = FFMpegLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
