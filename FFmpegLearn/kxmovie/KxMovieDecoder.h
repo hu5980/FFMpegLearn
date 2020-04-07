@@ -26,6 +26,7 @@ typedef enum {
     kxMovieErroSetupScaler,
     kxMovieErroReSampler,
     kxMovieErroUnsupported,
+    kxMovieErrorSetCodecError
     
 } kxMovieError;
 
@@ -39,7 +40,7 @@ typedef enum {
 } KxMovieFrameType;
 
 typedef enum {
-        
+    
     KxVideoFrameFormatRGB,
     KxVideoFrameFormatYUV,
     
@@ -82,31 +83,30 @@ typedef enum {
 @property (readonly, nonatomic, strong) NSString *text;
 @end
 
-typedef BOOL(^KxMovieDecoderInterruptCallback)();
+typedef BOOL(^KxMovieDecoderInterruptCallback)(void);
 
 @interface KxMovieDecoder : NSObject
-
-@property (readonly, nonatomic, strong) NSString *path;
+@property (readonly, nonatomic, strong) NSString *path; //
 @property (readonly, nonatomic) BOOL isEOF;
 @property (readwrite,nonatomic) CGFloat position;
 @property (readonly, nonatomic) CGFloat duration;
 @property (readonly, nonatomic) CGFloat fps;
-@property (readonly, nonatomic) CGFloat sampleRate;
+@property (readonly, nonatomic) CGFloat sampleRate; //采样率
 @property (readonly, nonatomic) NSUInteger frameWidth;
 @property (readonly, nonatomic) NSUInteger frameHeight;
-@property (readonly, nonatomic) NSUInteger audioStreamsCount;
-@property (readwrite,nonatomic) NSInteger selectedAudioStream;
-@property (readonly, nonatomic) NSUInteger subtitleStreamsCount;
-@property (readwrite,nonatomic) NSInteger selectedSubtitleStream;
-@property (readonly, nonatomic) BOOL validVideo;
-@property (readonly, nonatomic) BOOL validAudio;
-@property (readonly, nonatomic) BOOL validSubtitles;
+@property (readonly, nonatomic) NSUInteger audioStreamsCount; //音频流数
+@property (readwrite,nonatomic) NSInteger selectedAudioStream; // 选中的音频流
+@property (readonly, nonatomic) NSUInteger subtitleStreamsCount; // 字幕流梳
+@property (readwrite,nonatomic) NSInteger selectedSubtitleStream; // 选中的字幕流
+@property (readonly, nonatomic) BOOL validVideo;       // 视频是否有效
+@property (readonly, nonatomic) BOOL validAudio;       // 音频是否有效
+@property (readonly, nonatomic) BOOL validSubtitles;   // 字幕是否有效
 @property (readonly, nonatomic, strong) NSDictionary *info;
-@property (readonly, nonatomic, strong) NSString *videoStreamFormatName;
-@property (readonly, nonatomic) BOOL isNetwork;
-@property (readonly, nonatomic) CGFloat startTime;
+@property (readonly, nonatomic, strong) NSString *videoStreamFormatName; //视频流格式名称
+@property (readonly, nonatomic) BOOL isNetwork;        // 是否是网络音视频
+@property (readonly, nonatomic) CGFloat startTime;     // 开始时间
 @property (readwrite, nonatomic) BOOL disableDeinterlacing;
-@property (readwrite, nonatomic, strong) KxMovieDecoderInterruptCallback interruptCallback;
+@property (readwrite, nonatomic, strong) KxMovieDecoderInterruptCallback interruptCallback; // 中断回调
 
 + (id) movieDecoderWithContentPath: (NSString *) path
                              error: (NSError **) perror;
@@ -114,7 +114,7 @@ typedef BOOL(^KxMovieDecoderInterruptCallback)();
 - (BOOL) openFile: (NSString *) path
             error: (NSError **) perror;
 
--(void) closeFile;
+- (void) closeFile;
 
 - (BOOL) setupVideoFrameFormat: (KxVideoFrameFormat) format;
 

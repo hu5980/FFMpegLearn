@@ -72,6 +72,9 @@ static NSString * errorMessage (kxMovieError errorCode)
             
         case kxMovieErroUnsupported:
             return NSLocalizedString(@"The ability is not supported", nil);
+            
+        case kxMovieErrorSetCodecError:
+            return NSLocalizedString(@"Faile to set codec context Parems", nil);
     }
 }
 
@@ -108,7 +111,6 @@ static void fillSignal(SInt16 *outData,  UInt32 numFrames, UInt32 numChannels)
 static void fillSignalF(float *outData,  UInt32 numFrames, UInt32 numChannels)
 {
     static float phase = 0.0;
-    
     for (int i=0; i < numFrames; ++i)
     {
         for (int iChannel = 0; iChannel < numChannels; ++iChannel)
@@ -217,14 +219,12 @@ static void testConvertYUV420pToRGB(AVFrame * frame, uint8_t *outbuf, int linesi
 static void avStreamFPSTimeBase(AVStream *st, CGFloat defaultTimeBase, CGFloat *pFPS, CGFloat *pTimeBase)
 {
     CGFloat fps, timebase;
-    
     if (st->time_base.den && st->time_base.num)
         timebase = av_q2d(st->time_base);
     else if(st->codec->time_base.den && st->codec->time_base.num)
         timebase = av_q2d(st->codec->time_base);
     else
         timebase = defaultTimeBase;
-        
     if (st->codec->ticks_per_frame != 1) {
         LoggerStream(0, @"WARNING: st.codec.ticks_per_frame=%d", st->codec->ticks_per_frame);
         //timebase *= st->codec->ticks_per_frame;
@@ -403,9 +403,9 @@ static int interrupt_callback(void *ctx);
     AVCodecContext      *_subtitleCodecCtx;
     AVFrame             *_videoFrame;
     AVFrame             *_audioFrame;
-    NSInteger           _videoStream;
-    NSInteger           _audioStream;
-    NSInteger           _subtitleStream;
+    int                 _videoStream;
+    int                 _audioStream;
+    int                 _subtitleStream;
 	AVPicture           _picture;
     BOOL                _pictureValid;
     struct SwsContext   *_swsContext;
@@ -558,104 +558,89 @@ static int interrupt_callback(void *ctx);
     return _subtitleStream != -1;
 }
 
-- (NSDictionary *) info
-{
-    if (!_info) {
-        
-        NSMutableDictionary *md = [NSMutableDictionary dictionary];
-        
-        if (_formatCtx) {
-        
-            const char *formatName = _formatCtx->iformat->name;
-            [md setValue: [NSString stringWithCString:formatName encoding:NSUTF8StringEncoding]
-                  forKey: @"format"];
-            
-            if (_formatCtx->bit_rate) {
-                
-                [md setValue: [NSNumber numberWithInt:_formatCtx->bit_rate]
-                      forKey: @"bitrate"];
-            }
-            
-            if (_formatCtx->metadata) {
-                
-                NSMutableDictionary *md1 = [NSMutableDictionary dictionary];
-                
-                AVDictionaryEntry *tag = NULL;
-                 while((tag = av_dict_get(_formatCtx->metadata, "", tag, AV_DICT_IGNORE_SUFFIX))) {
-                     
-                     [md1 setValue: [NSString stringWithCString:tag->value encoding:NSUTF8StringEncoding]
-                            forKey: [NSString stringWithCString:tag->key encoding:NSUTF8StringEncoding]];
-                 }
-                
-                [md setValue: [md1 copy] forKey: @"metadata"];
-            }
-        
-            char buf[256];
-            
-            if (_videoStreams.count) {
-                NSMutableArray *ma = [NSMutableArray array];
-                for (NSNumber *n in _videoStreams) {
-                    AVStream *st = _formatCtx->streams[n.integerValue];
-                    avcodec_string(buf, sizeof(buf), st->codec, 1);
-                    NSString *s = [NSString stringWithCString:buf encoding:NSUTF8StringEncoding];
-                    if ([s hasPrefix:@"Video: "])
-                        s = [s substringFromIndex:@"Video: ".length];
-                    [ma addObject:s];
-                }
-                md[@"video"] = ma.copy;
-            }
-            
-            if (_audioStreams.count) {
-                NSMutableArray *ma = [NSMutableArray array];
-                for (NSNumber *n in _audioStreams) {
-                    AVStream *st = _formatCtx->streams[n.integerValue];
-                    
-                    NSMutableString *ms = [NSMutableString string];
-                    AVDictionaryEntry *lang = av_dict_get(st->metadata, "language", NULL, 0);
-                    if (lang && lang->value) {
-                        [ms appendFormat:@"%s ", lang->value];
-                    }
-                    
-                    avcodec_string(buf, sizeof(buf), st->codec, 1);
-                    NSString *s = [NSString stringWithCString:buf encoding:NSUTF8StringEncoding];
-                    if ([s hasPrefix:@"Audio: "])
-                        s = [s substringFromIndex:@"Audio: ".length];
-                    [ms appendString:s];
-                    
-                    [ma addObject:ms.copy];
-                }                
-                md[@"audio"] = ma.copy;
-            }
-            
-            if (_subtitleStreams.count) {
-                NSMutableArray *ma = [NSMutableArray array];
-                for (NSNumber *n in _subtitleStreams) {
-                    AVStream *st = _formatCtx->streams[n.integerValue];
-                    
-                    NSMutableString *ms = [NSMutableString string];
-                    AVDictionaryEntry *lang = av_dict_get(st->metadata, "language", NULL, 0);
-                    if (lang && lang->value) {
-                        [ms appendFormat:@"%s ", lang->value];
-                    }
-                    
-                    avcodec_string(buf, sizeof(buf), st->codec, 1);
-                    NSString *s = [NSString stringWithCString:buf encoding:NSUTF8StringEncoding];
-                    if ([s hasPrefix:@"Subtitle: "])
-                        s = [s substringFromIndex:@"Subtitle: ".length];
-                    [ms appendString:s];
-                    
-                    [ma addObject:ms.copy];
-                }               
-                md[@"subtitles"] = ma.copy;
-            }
-            
-        }
-                
-        _info = [md copy];
-    }
-    
-    return _info;
-}
+//- (NSDictionary *) info
+//{
+//    if (!_info) {
+//        NSMutableDictionary *md = [NSMutableDictionary dictionary];
+//        if (_formatCtx) {
+//            const char *formatName = _formatCtx->iformat->name;
+//            [md setValue: [NSString stringWithCString:formatName encoding:NSUTF8StringEncoding]
+//                  forKey: @"format"];
+//            if (_formatCtx->bit_rate) {
+//                [md setValue: [NSNumber numberWithInt:_formatCtx->bit_rate]forKey: @"bitrate"];
+//            }
+//            if (_formatCtx->metadata) {
+//                NSMutableDictionary *md1 = [NSMutableDictionary dictionary];
+//                AVDictionaryEntry *tag = NULL;
+//                 while((tag = av_dict_get(_formatCtx->metadata, "", tag, AV_DICT_IGNORE_SUFFIX))) {
+//                     [md1 setValue: [NSString stringWithCString:tag->value encoding:NSUTF8StringEncoding]
+//                            forKey: [NSString stringWithCString:tag->key encoding:NSUTF8StringEncoding]];
+//                 }
+//                [md setValue: [md1 copy] forKey: @"metadata"];
+//            }
+//            
+//            char buf[256];
+//            if (_videoStreams.count) {
+//                NSMutableArray *ma = [NSMutableArray array];
+//                for (NSNumber *n in _videoStreams) {
+//                    AVStream *st = _formatCtx->streams[n.integerValue];
+//                    avcodec_string(buf, sizeof(buf), st->codec, 1);
+//                    NSString *s = [NSString stringWithCString:buf encoding:NSUTF8StringEncoding];
+//                    if ([s hasPrefix:@"Video: "])
+//                        s = [s substringFromIndex:@"Video: ".length];
+//                    [ma addObject:s];
+//                }
+//                md[@"video"] = ma.copy;
+//            }
+//            
+//            if (_audioStreams.count) {
+//                NSMutableArray *ma = [NSMutableArray array];
+//                for (NSNumber *n in _audioStreams) {
+//                    AVStream *st = _formatCtx->streams[n.integerValue];
+//                    
+//                    NSMutableString *ms = [NSMutableString string];
+//                    AVDictionaryEntry *lang = av_dict_get(st->metadata, "language", NULL, 0);
+//                    if (lang && lang->value) {
+//                        [ms appendFormat:@"%s ", lang->value];
+//                    }
+//                    
+//                    avcodec_string(buf, sizeof(buf), st->codec, 1);
+//                    NSString *s = [NSString stringWithCString:buf encoding:NSUTF8StringEncoding];
+//                    if ([s hasPrefix:@"Audio: "])
+//                        s = [s substringFromIndex:@"Audio: ".length];
+//                    [ms appendString:s];
+//                    
+//                    [ma addObject:ms.copy];
+//                }                
+//                md[@"audio"] = ma.copy;
+//            }
+//            
+//            if (_subtitleStreams.count) {
+//                NSMutableArray *ma = [NSMutableArray array];
+//                for (NSNumber *n in _subtitleStreams) {
+//                    AVStream *st = _formatCtx->streams[n.integerValue];
+//                    
+//                    NSMutableString *ms = [NSMutableString string];
+//                    AVDictionaryEntry *lang = av_dict_get(st->metadata, "language", NULL, 0);
+//                    if (lang && lang->value) {
+//                        [ms appendFormat:@"%s ", lang->value];
+//                    }
+//                    
+//                    avcodec_string(buf, sizeof(buf), st->codec, 1);
+//                    NSString *s = [NSString stringWithCString:buf encoding:NSUTF8StringEncoding];
+//                    if ([s hasPrefix:@"Subtitle: "])
+//                        s = [s substringFromIndex:@"Subtitle: ".length];
+//                    [ms appendString:s];
+//                    
+//                    [ma addObject:ms.copy];
+//                }               
+//                md[@"subtitles"] = ma.copy;
+//            }
+//        }
+//        _info = [md copy];
+//    }
+//    return _info;
+//}
 
 - (NSString *) videoStreamFormatName
 {
@@ -693,7 +678,7 @@ static int interrupt_callback(void *ctx);
 + (void)initialize
 {
     av_log_set_callback(FFLog);
-    av_register_all();
+//    av_register_all();
     avformat_network_init();
 }
 
@@ -720,40 +705,28 @@ static int interrupt_callback(void *ctx);
 {
     NSAssert(path, @"nil path");
     NSAssert(!_formatCtx, @"already open");
-    
     _isNetwork = isNetworkPath(path);
     
     static BOOL needNetworkInit = YES;
     if (needNetworkInit && _isNetwork) {
-        
         needNetworkInit = NO;
         avformat_network_init();
     }
-    
     _path = path;
-    
     kxMovieError errCode = [self openInput: path];
-    
     if (errCode == kxMovieErrorNone) {
-        
         kxMovieError videoErr = [self openVideoStream];
         kxMovieError audioErr = [self openAudioStream];
-        
         _subtitleStream = -1;
-        
         if (videoErr != kxMovieErrorNone &&
             audioErr != kxMovieErrorNone) {
-         
             errCode = videoErr; // both fails
-            
         } else {
-            
             _subtitleStreams = collectStreams(_formatCtx, AVMEDIA_TYPE_SUBTITLE);
         }
     }
     
     if (errCode != kxMovieErrorNone) {
-        
         [self closeFile];
         NSString *errMsg = errorMessage(errCode);
         LoggerStream(0, @"%@, %@", errMsg, path.lastPathComponent);
@@ -761,7 +734,6 @@ static int interrupt_callback(void *ctx);
             *perror = kxmovieError(errCode, errMsg);
         return NO;
     }
-        
     return YES;
 }
 
@@ -770,7 +742,7 @@ static int interrupt_callback(void *ctx);
     AVFormatContext *formatCtx = NULL;
     
     if (_interruptCallback) {
-        
+        //创建format context:
         formatCtx = avformat_alloc_context();
         if (!formatCtx)
             return kxMovieErrorOpenFile;
@@ -779,6 +751,7 @@ static int interrupt_callback(void *ctx);
         formatCtx->interrupt_callback = cb;
     }
     
+    //打开文件流
     if (avformat_open_input(&formatCtx, [path cStringUsingEncoding: NSUTF8StringEncoding], NULL, NULL) < 0) {
         
         if (formatCtx)
@@ -786,6 +759,7 @@ static int interrupt_callback(void *ctx);
         return kxMovieErrorOpenFile;
     }
     
+    //寻找流信息
     if (avformat_find_stream_info(formatCtx, NULL) < 0) {
         
         avformat_close_input(&formatCtx);
@@ -805,61 +779,58 @@ static int interrupt_callback(void *ctx);
     _artworkStream = -1;
     _videoStreams = collectStreams(_formatCtx, AVMEDIA_TYPE_VIDEO);
     for (NSNumber *n in _videoStreams) {
-        
-        const NSUInteger iStream = n.integerValue;
-
+        const int iStream = n.intValue;
         if (0 == (_formatCtx->streams[iStream]->disposition & AV_DISPOSITION_ATTACHED_PIC)) {
-        
             errCode = [self openVideoStream: iStream];
             if (errCode == kxMovieErrorNone)
                 break;
-            
         } else {
-            
             _artworkStream = iStream;
         }
     }
-    
     return errCode;
 }
 
-- (kxMovieError) openVideoStream: (NSInteger) videoStream
+- (kxMovieError) openVideoStream: (int) videoStream
 {    
-    // get a pointer to the codec context for the video stream
-    AVCodecContext *codecCtx = _formatCtx->streams[videoStream]->codec;
+    // 获取与此流相关的编解码器参数
+    AVCodecParameters *params = _formatCtx->streams[videoStream]->codecpar;
     
-    // find the decoder for the video stream
-    AVCodec *codec = avcodec_find_decoder(codecCtx->codec_id);
+    // 通过编码器id 获取编码器
+    AVCodec *codec = avcodec_find_decoder(params->codec_id);
     if (!codec)
         return kxMovieErrorCodecNotFound;
     
-    // inform the codec that we can handle truncated bitstreams -- i.e.,
-    // bitstreams where frame boundaries can fall in the middle of packets
-    //if(codec->capabilities & CODEC_CAP_TRUNCATED)
-    //    _codecCtx->flags |= CODEC_FLAG_TRUNCATED;
+    // 创建codec 上下文
+     AVCodecContext *context = avcodec_alloc_context3(codec);
+    // 给context 设置参数
+    int ret = avcodec_parameters_to_context(context, params);
+    if (ret < 0) {
+        avcodec_free_context(&context);
+        return kxMovieErrorSetCodecError;
+    }
     
-    // open codec
-    if (avcodec_open2(codecCtx, codec, NULL) < 0)
+    // 打开解码器
+    if (avcodec_open2(context, codec, NULL) < 0)
         return kxMovieErrorOpenCodec;
-        
+    
     _videoFrame = av_frame_alloc();
-
+    
     if (!_videoFrame) {
-        avcodec_close(codecCtx);
+        avcodec_close(context);
         return kxMovieErrorAllocateFrame;
     }
     
     _videoStream = videoStream;
-    _videoCodecCtx = codecCtx;
+    _videoCodecCtx = context;
     
-    // determine fps
-    
+    // 计算 fps 帧率
     AVStream *st = _formatCtx->streams[_videoStream];
     avStreamFPSTimeBase(st, 0.04, &_fps, &_videoTimeBase);
     
-    LoggerVideo(1, @"video codec size: %d:%d fps: %.3f tb: %f",
-                self.frameWidth,
-                self.frameHeight,
+    LoggerVideo(1, @"video codec size: %lu%lud fps: %.3f tb: %f",
+                (unsigned long)self.frameWidth,
+                (unsigned long)self.frameHeight,
                 _fps,
                 _videoTimeBase);
     
@@ -1113,11 +1084,8 @@ static int interrupt_callback(void *ctx);
 {
     if (!_videoFrame->data[0])
         return nil;
-    
     KxVideoFrame *frame;
-    
     if (_videoFrameFormat == KxVideoFrameFormatYUV) {
-            
         KxVideoFrameYUV * yuvFrame = [[KxVideoFrameYUV alloc] init];
         
         yuvFrame.luma = copyFrameData(_videoFrame->data[0],
@@ -1136,12 +1104,9 @@ static int interrupt_callback(void *ctx);
                                          _videoCodecCtx->height / 2);
         
         frame = yuvFrame;
-    
     } else {
-    
         if (!_swsContext &&
             ![self setupScaler]) {
-            
             LoggerVideo(0, @"fail setup video scaler");
             return nil;
         }
@@ -1169,28 +1134,22 @@ static int interrupt_callback(void *ctx);
     
     const int64_t frameDuration = av_frame_get_pkt_duration(_videoFrame);
     if (frameDuration) {
-        
         frame.duration = frameDuration * _videoTimeBase;
         frame.duration += _videoFrame->repeat_pict * _videoTimeBase * 0.5;
-        
         //if (_videoFrame->repeat_pict > 0) {
         //    LoggerVideo(0, @"_videoFrame.repeat_pict %d", _videoFrame->repeat_pict);
         //}
-        
     } else {
-        
         // sometimes, ffmpeg unable to determine a frame duration
         // as example yuvj420p stream from web camera
         frame.duration = 1.0 / _fps;
-    }    
-    
+    }
 #if 0
     LoggerVideo(2, @"VFD: %.4f %.4f | %lld ",
                 frame.position,
                 frame.duration,
                 av_frame_get_pkt_pos(_videoFrame));
 #endif
-    
     return frame;
 }
 
@@ -1357,41 +1316,29 @@ static int interrupt_callback(void *ctx);
     if (_videoStream == -1 &&
         _audioStream == -1)
         return nil;
-
     NSMutableArray *result = [NSMutableArray array];
-    
     AVPacket packet;
-    
     CGFloat decodedDuration = 0;
-    
     BOOL finished = NO;
-    
     while (!finished) {
-        
+        //调用av_read_frame 获取AVPacket
         if (av_read_frame(_formatCtx, &packet) < 0) {
             _isEOF = YES;
             break;
         }
-        
+        //判断AVPacket是否是我们需要解码的包,不是就继续读取包
         if (packet.stream_index ==_videoStream) {
-           
             int pktSize = packet.size;
-            
             while (pktSize > 0) {
-                            
                 int gotframe = 0;
-                int len = avcodec_decode_video2(_videoCodecCtx,
-                                                _videoFrame,
-                                                &gotframe,
-                                                &packet);
-                
+                //对于视频调用avcodec_decode_video2对视频解码
+                int len = avcodec_decode_video2(_videoCodecCtx,_videoFrame,&gotframe,&packet);
                 if (len < 0) {
                     LoggerVideo(0, @"decode video error, skip packet");
                     break;
                 }
-                
                 if (gotframe) {
-                    
+                    ////interlaced_frame 是否是隔行扫描
                     if (!_disableDeinterlacing &&
                         _videoFrame->interlaced_frame) {
                         
@@ -1401,51 +1348,34 @@ static int interrupt_callback(void *ctx);
 //                                              _videoCodecCtx->width,
 //                                              _videoCodecCtx->height);
                     }
-                    
+                    //处理视频帧
                     KxVideoFrame *frame = [self handleVideoFrame];
                     if (frame) {
-                        
                         [result addObject:frame];
-                        
                         _position = frame.position;
                         decodedDuration += frame.duration;
                         if (decodedDuration > minDuration)
                             finished = YES;
                     }
                 }
-                                
                 if (0 == len)
                     break;
-                
                 pktSize -= len;
             }
-            
         } else if (packet.stream_index == _audioStream) {
-                        
             int pktSize = packet.size;
-            
             while (pktSize > 0) {
-                
                 int gotframe = 0;
-                int len = avcodec_decode_audio4(_audioCodecCtx,
-                                                _audioFrame,                                                
-                                                &gotframe,
-                                                &packet);
-                
+                int len = avcodec_decode_audio4(_audioCodecCtx,_audioFrame,&gotframe,&packet);
                 if (len < 0) {
                     LoggerAudio(0, @"decode audio error, skip packet");
                     break;
                 }
-                
                 if (gotframe) {
-                    
                     KxAudioFrame * frame = [self handleAudioFrame];
                     if (frame) {
-                        
                         [result addObject:frame];
-                                                
                         if (_videoStream == -1) {
-                            
                             _position = frame.position;
                             decodedDuration += frame.duration;
                             if (decodedDuration > minDuration)
@@ -1453,57 +1383,39 @@ static int interrupt_callback(void *ctx);
                         }
                     }
                 }
-                
                 if (0 == len)
                     break;
-                
                 pktSize -= len;
             }
-            
         } else if (packet.stream_index == _artworkStream) {
-            
             if (packet.size) {
-
                 KxArtworkFrame *frame = [[KxArtworkFrame alloc] init];
                 frame.picture = [NSData dataWithBytes:packet.data length:packet.size];
                 [result addObject:frame];
             }
-            
         } else if (packet.stream_index == _subtitleStream) {
-            
             int pktSize = packet.size;
-            
             while (pktSize > 0) {
-                
                 AVSubtitle subtitle;
                 int gotsubtitle = 0;
-                int len = avcodec_decode_subtitle2(_subtitleCodecCtx,
-                                                  &subtitle,
-                                                  &gotsubtitle,
-                                                  &packet);
-                
+                int len = avcodec_decode_subtitle2(_subtitleCodecCtx,&subtitle,&gotsubtitle,&packet);
                 if (len < 0) {
                     LoggerStream(0, @"decode subtitle error, skip packet");
                     break;
                 }
-                
                 if (gotsubtitle) {
-                    
                     KxSubtitleFrame *frame = [self handleSubtitle: &subtitle];
                     if (frame) {
                         [result addObject:frame];
                     }
                     avsubtitle_free(&subtitle);
                 }
-                
                 if (0 == len)
                     break;
-                
                 pktSize -= len;
             }
         }
-
-        av_free_packet(&packet);
+        av_packet_unref(&packet);
 	}
 
     return result;

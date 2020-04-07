@@ -12,13 +12,8 @@
 		8D669A4E24375FB10014DCE6 /* kxmovie.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D669A4524375FB10014DCE6 /* kxmovie.bundle */; };
 		8D669A4F24375FB10014DCE6 /* KxAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D669A4624375FB10014DCE6 /* KxAudioManager.m */; };
 		8D669A5024375FB10014DCE6 /* KxMovieDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D669A4A24375FB10014DCE6 /* KxMovieDecoder.m */; };
-		8D669A54243761F20014DCE6 /* test_1.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D669A51243761F20014DCE6 /* test_1.webm */; };
-		8D669A55243761F20014DCE6 /* test_1.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D669A52243761F20014DCE6 /* test_1.hevc */; };
-		8D669A56243761F20014DCE6 /* test_1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D669A53243761F20014DCE6 /* test_1.mp4 */; };
 		8D6EDE4C242FAE9000608E89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6EDE4B242FAE9000608E89 /* AppDelegate.m */; };
-		8D6EDE4F242FAE9000608E89 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6EDE4E242FAE9000608E89 /* SceneDelegate.m */; };
 		8D6EDE52242FAE9000608E89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6EDE51242FAE9000608E89 /* ViewController.m */; };
-		8D6EDE55242FAE9000608E89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D6EDE53242FAE9000608E89 /* Main.storyboard */; };
 		8D6EDE57242FAE9100608E89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D6EDE56242FAE9100608E89 /* Assets.xcassets */; };
 		8D6EDE5A242FAE9100608E89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D6EDE58242FAE9100608E89 /* LaunchScreen.storyboard */; };
 		8D6EDE5D242FAE9100608E89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6EDE5C242FAE9100608E89 /* main.m */; };
@@ -35,12 +30,71 @@
 		8D6EDEF4242FB1EE00608E89 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6EDEF3242FB1ED00608E89 /* CoreMedia.framework */; };
 		8D6EDEF6242FB1F900608E89 /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6EDEF5242FB1F900608E89 /* libz.1.1.3.tbd */; };
 		8D6EDEF8242FB20000608E89 /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6EDEF7242FB20000608E89 /* libiconv.2.4.0.tbd */; };
+		8D742C4D24399F70008DE6CE /* test.mkv in Resources */ = {isa = PBXBuildFile; fileRef = 8D742C4C24399F70008DE6CE /* test.mkv */; };
+		8D8C9F9B2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F622438702600794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.webm */; };
+		8D8C9F9C2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F632438702600794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.webm */; };
+		8D8C9F9D2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F642438702700794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.webm */; };
+		8D8C9F9E2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F652438702700794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.mp4 */; };
+		8D8C9F9F2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F662438702800794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.mp4 */; };
+		8D8C9FA02438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F672438702800794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.hevc */; };
+		8D8C9FA12438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F682438702900794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.webm */; };
+		8D8C9FA22438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F692438702900794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.hevc */; };
+		8D8C9FA32438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F6A2438702900794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.mp4 */; };
+		8D8C9FA42438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F6B2438702A00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.hevc */; };
+		8D8C9FA52438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F6C2438702B00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.hevc */; };
+		8D8C9FA62438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F6D2438702C00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.hevc */; };
+		8D8C9FA72438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F6E2438702C00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.webm */; };
+		8D8C9FA82438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F6F2438702D00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.hevc */; };
+		8D8C9FA92438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F702438702D00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.hevc */; };
+		8D8C9FAA2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F712438702D00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.mp4 */; };
+		8D8C9FAB2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F722438702E00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.mp4 */; };
+		8D8C9FAC2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F732438702F00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.webm */; };
+		8D8C9FAD2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F742438702F00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.hevc */; };
+		8D8C9FAE2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F752438703000794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.hevc */; };
+		8D8C9FAF2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F762438703100794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.mp4 */; };
+		8D8C9FB02438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F772438703200794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.mp4 */; };
+		8D8C9FB12438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F782438703200794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.hevc */; };
+		8D8C9FB22438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F792438703200794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.hevc */; };
+		8D8C9FB32438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F7A2438703300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.webm */; };
+		8D8C9FB42438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F7B2438703400794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.hevc */; };
+		8D8C9FB52438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F7C2438703400794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.webm */; };
+		8D8C9FB62438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F7D2438703400794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.webm */; };
+		8D8C9FB72438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F7E2438703500794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.webm */; };
+		8D8C9FB82438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F7F2438703500794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.mp4 */; };
+		8D8C9FB92438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F802438703600794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.mp4 */; };
+		8D8C9FBA2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F812438703600794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.mp4 */; };
+		8D8C9FBB2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F822438703600794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.hevc */; };
+		8D8C9FBC2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F832438703700794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.webm */; };
+		8D8C9FBD2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F842438703700794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.webm */; };
+		8D8C9FBE2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F852438703700794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.webm */; };
+		8D8C9FBF2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F862438703800794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.mp4 */; };
+		8D8C9FC02438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F872438703800794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.webm */; };
+		8D8C9FC12438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F882438703900794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.webm */; };
+		8D8C9FC22438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F892438703A00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.webm */; };
+		8D8C9FC32438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F8A2438703A00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.hevc */; };
+		8D8C9FC42438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F8B2438703A00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.mp4 */; };
+		8D8C9FC52438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F8C2438703B00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.mp4 */; };
+		8D8C9FC62438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F8D2438703C00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.hevc */; };
+		8D8C9FC72438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F8E2438703D00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.hevc */; };
+		8D8C9FC82438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F8F2438703D00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.hevc */; };
+		8D8C9FC92438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F902438703E00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.mp4 */; };
+		8D8C9FCA2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F912438703E00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.mp4 */; };
+		8D8C9FCB2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F922438703F00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.mp4 */; };
+		8D8C9FCC2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F932438703F00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.webm */; };
+		8D8C9FCD2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F942438704000794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.hevc */; };
+		8D8C9FCE2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.hevc in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F952438704100794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.hevc */; };
+		8D8C9FCF2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F962438704100794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.mp4 */; };
+		8D8C9FD02438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F972438704200794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.webm */; };
+		8D8C9FD12438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F982438704200794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.mp4 */; };
+		8D8C9FD22438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.webm in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F992438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.webm */; };
+		8D8C9FD32438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C9F9A2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.mp4 */; };
+		8D8C9FD62438739800794296 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8C9FD52438739800794296 /* DetailTableViewController.m */; };
 		8D991B21243091D400152CB0 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D991B20243091D300152CB0 /* libbz2.tbd */; };
-		8D991B2424309A7100152CB0 /* 1080_h264.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8D991B2324309A7100152CB0 /* 1080_h264.mp4 */; };
 		8DD326B1243069D90088D217 /* DecodeClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD326B0243069D90088D217 /* DecodeClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D5FC22E243881AC0089DD9B /* KxAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxAudioManager.h; sourceTree = "<group>"; };
 		8D669A4124375FB10014DCE6 /* KxMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieViewController.m; sourceTree = "<group>"; };
 		8D669A4224375FB10014DCE6 /* KxMovieDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieDecoder.h; sourceTree = "<group>"; };
 		8D669A4324375FB10014DCE6 /* KxMovieGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieGLView.m; sourceTree = "<group>"; };
@@ -51,18 +105,11 @@
 		8D669A4824375FB10014DCE6 /* KxMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieViewController.h; sourceTree = "<group>"; };
 		8D669A4924375FB10014DCE6 /* KxMovieGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieGLView.h; sourceTree = "<group>"; };
 		8D669A4A24375FB10014DCE6 /* KxMovieDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieDecoder.m; sourceTree = "<group>"; };
-		8D669A4B24375FB10014DCE6 /* KxAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxAudioManager.h; sourceTree = "<group>"; };
-		8D669A51243761F20014DCE6 /* test_1.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_1.webm; sourceTree = "<group>"; };
-		8D669A52243761F20014DCE6 /* test_1.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_1.hevc; sourceTree = "<group>"; };
-		8D669A53243761F20014DCE6 /* test_1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_1.mp4; sourceTree = "<group>"; };
 		8D6EDE47242FAE9000608E89 /* FFmpegLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFmpegLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6EDE4A242FAE9000608E89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D6EDE4B242FAE9000608E89 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8D6EDE4D242FAE9000608E89 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		8D6EDE4E242FAE9000608E89 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		8D6EDE50242FAE9000608E89 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8D6EDE51242FAE9000608E89 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8D6EDE54242FAE9000608E89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D6EDE56242FAE9100608E89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D6EDE59242FAE9100608E89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D6EDE5B242FAE9100608E89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -193,9 +240,68 @@
 		8D6EDEF3242FB1ED00608E89 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		8D6EDEF5242FB1F900608E89 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
 		8D6EDEF7242FB20000608E89 /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
+		8D742C4C24399F70008DE6CE /* test.mkv */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mkv; sourceTree = "<group>"; };
+		8D8C9F622438702600794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.webm"; sourceTree = "<group>"; };
+		8D8C9F632438702600794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.webm"; sourceTree = "<group>"; };
+		8D8C9F642438702700794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.webm"; sourceTree = "<group>"; };
+		8D8C9F652438702700794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.mp4"; sourceTree = "<group>"; };
+		8D8C9F662438702800794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.mp4"; sourceTree = "<group>"; };
+		8D8C9F672438702800794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.hevc"; sourceTree = "<group>"; };
+		8D8C9F682438702900794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.webm"; sourceTree = "<group>"; };
+		8D8C9F692438702900794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.hevc"; sourceTree = "<group>"; };
+		8D8C9F6A2438702900794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.mp4"; sourceTree = "<group>"; };
+		8D8C9F6B2438702A00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.hevc"; sourceTree = "<group>"; };
+		8D8C9F6C2438702B00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.hevc"; sourceTree = "<group>"; };
+		8D8C9F6D2438702C00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.hevc"; sourceTree = "<group>"; };
+		8D8C9F6E2438702C00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.webm"; sourceTree = "<group>"; };
+		8D8C9F6F2438702D00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.hevc"; sourceTree = "<group>"; };
+		8D8C9F702438702D00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.hevc"; sourceTree = "<group>"; };
+		8D8C9F712438702D00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.mp4"; sourceTree = "<group>"; };
+		8D8C9F722438702E00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.mp4"; sourceTree = "<group>"; };
+		8D8C9F732438702F00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.webm"; sourceTree = "<group>"; };
+		8D8C9F742438702F00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.hevc"; sourceTree = "<group>"; };
+		8D8C9F752438703000794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.hevc"; sourceTree = "<group>"; };
+		8D8C9F762438703100794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.mp4"; sourceTree = "<group>"; };
+		8D8C9F772438703200794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.mp4"; sourceTree = "<group>"; };
+		8D8C9F782438703200794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.hevc"; sourceTree = "<group>"; };
+		8D8C9F792438703200794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.hevc"; sourceTree = "<group>"; };
+		8D8C9F7A2438703300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.webm"; sourceTree = "<group>"; };
+		8D8C9F7B2438703400794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.hevc"; sourceTree = "<group>"; };
+		8D8C9F7C2438703400794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.webm"; sourceTree = "<group>"; };
+		8D8C9F7D2438703400794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.webm"; sourceTree = "<group>"; };
+		8D8C9F7E2438703500794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.webm"; sourceTree = "<group>"; };
+		8D8C9F7F2438703500794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.mp4"; sourceTree = "<group>"; };
+		8D8C9F802438703600794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.mp4"; sourceTree = "<group>"; };
+		8D8C9F812438703600794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.mp4"; sourceTree = "<group>"; };
+		8D8C9F822438703600794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.hevc"; sourceTree = "<group>"; };
+		8D8C9F832438703700794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.webm"; sourceTree = "<group>"; };
+		8D8C9F842438703700794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.webm"; sourceTree = "<group>"; };
+		8D8C9F852438703700794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.webm"; sourceTree = "<group>"; };
+		8D8C9F862438703800794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.mp4"; sourceTree = "<group>"; };
+		8D8C9F872438703800794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.webm"; sourceTree = "<group>"; };
+		8D8C9F882438703900794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.webm"; sourceTree = "<group>"; };
+		8D8C9F892438703A00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.webm"; sourceTree = "<group>"; };
+		8D8C9F8A2438703A00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.hevc"; sourceTree = "<group>"; };
+		8D8C9F8B2438703A00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.mp4"; sourceTree = "<group>"; };
+		8D8C9F8C2438703B00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.mp4"; sourceTree = "<group>"; };
+		8D8C9F8D2438703C00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.hevc"; sourceTree = "<group>"; };
+		8D8C9F8E2438703D00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.hevc"; sourceTree = "<group>"; };
+		8D8C9F8F2438703D00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.hevc"; sourceTree = "<group>"; };
+		8D8C9F902438703E00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.mp4"; sourceTree = "<group>"; };
+		8D8C9F912438703E00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.mp4"; sourceTree = "<group>"; };
+		8D8C9F922438703F00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.mp4"; sourceTree = "<group>"; };
+		8D8C9F932438703F00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.webm"; sourceTree = "<group>"; };
+		8D8C9F942438704000794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.hevc"; sourceTree = "<group>"; };
+		8D8C9F952438704100794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.hevc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.hevc"; sourceTree = "<group>"; };
+		8D8C9F962438704100794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.mp4"; sourceTree = "<group>"; };
+		8D8C9F972438704200794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.webm"; sourceTree = "<group>"; };
+		8D8C9F982438704200794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.mp4"; sourceTree = "<group>"; };
+		8D8C9F992438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.webm"; sourceTree = "<group>"; };
+		8D8C9F9A2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.mp4"; sourceTree = "<group>"; };
+		8D8C9FD42438739800794296 /* DetailTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
+		8D8C9FD52438739800794296 /* DetailTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
 		8D991B1E243091A900152CB0 /* libbz2.1.0.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.5.tbd; path = usr/lib/libbz2.1.0.5.tbd; sourceTree = SDKROOT; };
 		8D991B20243091D300152CB0 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
-		8D991B2324309A7100152CB0 /* 1080_h264.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1080_h264.mp4; sourceTree = "<group>"; };
 		8DD326AF243069D90088D217 /* DecodeClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecodeClass.h; sourceTree = "<group>"; };
 		8DD326B0243069D90088D217 /* DecodeClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DecodeClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -228,17 +334,17 @@
 		8D669A4024375FB00014DCE6 /* kxmovie */ = {
 			isa = PBXGroup;
 			children = (
+				8D669A4824375FB10014DCE6 /* KxMovieViewController.h */,
 				8D669A4124375FB10014DCE6 /* KxMovieViewController.m */,
 				8D669A4224375FB10014DCE6 /* KxMovieDecoder.h */,
+				8D669A4A24375FB10014DCE6 /* KxMovieDecoder.m */,
+				8D669A4924375FB10014DCE6 /* KxMovieGLView.h */,
 				8D669A4324375FB10014DCE6 /* KxMovieGLView.m */,
 				8D669A4424375FB10014DCE6 /* KxLogger.h */,
-				8D669A4524375FB10014DCE6 /* kxmovie.bundle */,
+				8D5FC22E243881AC0089DD9B /* KxAudioManager.h */,
 				8D669A4624375FB10014DCE6 /* KxAudioManager.m */,
+				8D669A4524375FB10014DCE6 /* kxmovie.bundle */,
 				8D669A4724375FB10014DCE6 /* kxmovie-Prefix.pch */,
-				8D669A4824375FB10014DCE6 /* KxMovieViewController.h */,
-				8D669A4924375FB10014DCE6 /* KxMovieGLView.h */,
-				8D669A4A24375FB10014DCE6 /* KxMovieDecoder.m */,
-				8D669A4B24375FB10014DCE6 /* KxAudioManager.h */,
 			);
 			path = kxmovie;
 			sourceTree = "<group>";
@@ -268,13 +374,12 @@
 				8D6EDE63242FB0AE00608E89 /* FFmpeg-iOS */,
 				8D6EDE4A242FAE9000608E89 /* AppDelegate.h */,
 				8D6EDE4B242FAE9000608E89 /* AppDelegate.m */,
-				8D6EDE4D242FAE9000608E89 /* SceneDelegate.h */,
-				8D6EDE4E242FAE9000608E89 /* SceneDelegate.m */,
 				8D6EDE50242FAE9000608E89 /* ViewController.h */,
 				8D6EDE51242FAE9000608E89 /* ViewController.m */,
+				8D8C9FD42438739800794296 /* DetailTableViewController.h */,
+				8D8C9FD52438739800794296 /* DetailTableViewController.m */,
 				8DD326AF243069D90088D217 /* DecodeClass.h */,
 				8DD326B0243069D90088D217 /* DecodeClass.m */,
-				8D6EDE53242FAE9000608E89 /* Main.storyboard */,
 				8D6EDE56242FAE9100608E89 /* Assets.xcassets */,
 				8D6EDE58242FAE9100608E89 /* LaunchScreen.storyboard */,
 				8D6EDE5B242FAE9100608E89 /* Info.plist */,
@@ -500,10 +605,64 @@
 		8D991B2224309A0F00152CB0 /* Res */ = {
 			isa = PBXGroup;
 			children = (
-				8D991B2324309A7100152CB0 /* 1080_h264.mp4 */,
-				8D669A52243761F20014DCE6 /* test_1.hevc */,
-				8D669A53243761F20014DCE6 /* test_1.mp4 */,
-				8D669A51243761F20014DCE6 /* test_1.webm */,
+				8D742C4C24399F70008DE6CE /* test.mkv */,
+				8D8C9F672438702800794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.hevc */,
+				8D8C9F652438702700794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.mp4 */,
+				8D8C9F842438703700794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.webm */,
+				8D8C9F792438703200794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.hevc */,
+				8D8C9F9A2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.mp4 */,
+				8D8C9F7C2438703400794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.webm */,
+				8D8C9F8A2438703A00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.hevc */,
+				8D8C9F912438703E00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.mp4 */,
+				8D8C9F6E2438702C00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.webm */,
+				8D8C9F782438703200794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.hevc */,
+				8D8C9F812438703600794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.mp4 */,
+				8D8C9F852438703700794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.webm */,
+				8D8C9F822438703600794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.hevc */,
+				8D8C9F962438704100794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.mp4 */,
+				8D8C9F932438703F00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.webm */,
+				8D8C9F702438702D00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.hevc */,
+				8D8C9F902438703E00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.mp4 */,
+				8D8C9F632438702600794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.webm */,
+				8D8C9F8E2438703D00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.hevc */,
+				8D8C9F7F2438703500794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.mp4 */,
+				8D8C9F7A2438703300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.webm */,
+				8D8C9F692438702900794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.hevc */,
+				8D8C9F6A2438702900794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.mp4 */,
+				8D8C9F882438703900794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.webm */,
+				8D8C9F6D2438702C00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.hevc */,
+				8D8C9F982438704200794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.mp4 */,
+				8D8C9F7D2438703400794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.webm */,
+				8D8C9F942438704000794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.hevc */,
+				8D8C9F712438702D00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.mp4 */,
+				8D8C9F732438702F00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.webm */,
+				8D8C9F742438702F00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.hevc */,
+				8D8C9F8B2438703A00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.mp4 */,
+				8D8C9F622438702600794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.webm */,
+				8D8C9F752438703000794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.hevc */,
+				8D8C9F862438703800794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.mp4 */,
+				8D8C9F872438703800794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.webm */,
+				8D8C9F6C2438702B00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.hevc */,
+				8D8C9F802438703600794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.mp4 */,
+				8D8C9F972438704200794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.webm */,
+				8D8C9F7B2438703400794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.hevc */,
+				8D8C9F772438703200794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.mp4 */,
+				8D8C9F832438703700794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.webm */,
+				8D8C9F8D2438703C00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.hevc */,
+				8D8C9F722438702E00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.mp4 */,
+				8D8C9F7E2438703500794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.webm */,
+				8D8C9F8F2438703D00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.hevc */,
+				8D8C9F8C2438703B00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.mp4 */,
+				8D8C9F682438702900794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.webm */,
+				8D8C9F6F2438702D00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.hevc */,
+				8D8C9F762438703100794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.mp4 */,
+				8D8C9F892438703A00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.webm */,
+				8D8C9F6B2438702A00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.hevc */,
+				8D8C9F662438702800794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.mp4 */,
+				8D8C9F642438702700794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.webm */,
+				8D8C9F952438704100794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.hevc */,
+				8D8C9F922438703F00794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.mp4 */,
+				8D8C9F992438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.webm */,
 			);
 			path = Res;
 			sourceTree = "<group>";
@@ -565,14 +724,67 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D991B2424309A7100152CB0 /* 1080_h264.mp4 in Resources */,
-				8D669A56243761F20014DCE6 /* test_1.mp4 in Resources */,
+				8D8C9FC82438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.hevc in Resources */,
+				8D8C9FC12438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.webm in Resources */,
+				8D8C9FD22438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.webm in Resources */,
+				8D8C9FBF2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.mp4 in Resources */,
 				8D669A4E24375FB10014DCE6 /* kxmovie.bundle in Resources */,
+				8D8C9FB32438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.webm in Resources */,
+				8D8C9FCE2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.hevc in Resources */,
+				8D8C9FCD2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.hevc in Resources */,
+				8D8C9FA12438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.webm in Resources */,
+				8D8C9FBA2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.mp4 in Resources */,
+				8D8C9FA72438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.webm in Resources */,
+				8D8C9FC42438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.mp4 in Resources */,
+				8D8C9FBB2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.hevc in Resources */,
+				8D8C9F9E2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.mp4 in Resources */,
+				8D8C9F9C2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.webm in Resources */,
+				8D8C9FA62438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.hevc in Resources */,
+				8D8C9FAE2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.hevc in Resources */,
+				8D8C9FB72438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.webm in Resources */,
+				8D8C9FCA2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.mp4 in Resources */,
+				8D8C9FC22438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.webm in Resources */,
+				8D8C9FC52438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8500.mp4 in Resources */,
+				8D8C9F9F2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.mp4 in Resources */,
+				8D742C4D24399F70008DE6CE /* test.mkv in Resources */,
+				8D8C9FCF2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.mp4 in Resources */,
+				8D8C9FB62438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.webm in Resources */,
+				8D8C9F9B2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.webm in Resources */,
+				8D8C9FC32438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1500.hevc in Resources */,
+				8D8C9FA02438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.hevc in Resources */,
+				8D8C9FB82438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.mp4 in Resources */,
+				8D8C9FAC2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.webm in Resources */,
+				8D8C9FB02438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.mp4 in Resources */,
+				8D8C9FC72438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3500.hevc in Resources */,
+				8D8C9FCB2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate10000.mp4 in Resources */,
+				8D8C9FBC2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.webm in Resources */,
+				8D8C9FB42438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7500.hevc in Resources */,
+				8D8C9FA92438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.hevc in Resources */,
 				8D6EDE5A242FAE9100608E89 /* LaunchScreen.storyboard in Resources */,
-				8D669A55243761F20014DCE6 /* test_1.hevc in Resources */,
+				8D8C9F9D2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.webm in Resources */,
+				8D8C9FA32438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.mp4 in Resources */,
+				8D8C9FAD2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6000.hevc in Resources */,
+				8D8C9FA82438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.hevc in Resources */,
+				8D8C9FC02438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate6500.webm in Resources */,
 				8D6EDE57242FAE9100608E89 /* Assets.xcassets in Resources */,
-				8D669A54243761F20014DCE6 /* test_1.webm in Resources */,
-				8D6EDE55242FAE9000608E89 /* Main.storyboard in Resources */,
+				8D8C9FAF2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9000.mp4 in Resources */,
+				8D8C9FD12438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4500.mp4 in Resources */,
+				8D8C9FC62438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.hevc in Resources */,
+				8D8C9FBD2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate500.webm in Resources */,
+				8D8C9FAB2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate8000.mp4 in Resources */,
+				8D8C9FA42438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate9500.hevc in Resources */,
+				8D8C9FC92438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate3000.mp4 in Resources */,
+				8D8C9FA52438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.hevc in Resources */,
+				8D8C9FB22438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.hevc in Resources */,
+				8D8C9FBE2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.webm in Resources */,
+				8D8C9FB12438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2000.hevc in Resources */,
+				8D8C9FB52438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.webm in Resources */,
+				8D8C9FAA2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate5000.mp4 in Resources */,
+				8D8C9FD32438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate1000.mp4 in Resources */,
+				8D8C9FCC2438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate2500.webm in Resources */,
+				8D8C9FD02438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.webm in Resources */,
+				8D8C9FB92438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate7000.mp4 in Resources */,
+				8D8C9FA22438704300794296 /* 绝地求生-持枪奔跑_1080P_CRF20_VBVMaxRate4000.hevc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +795,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D8C9FD62438739800794296 /* DetailTableViewController.m in Sources */,
 				8D669A4C24375FB10014DCE6 /* KxMovieViewController.m in Sources */,
 				8D669A5024375FB10014DCE6 /* KxMovieDecoder.m in Sources */,
 				8D6EDE52242FAE9000608E89 /* ViewController.m in Sources */,
@@ -591,21 +804,12 @@
 				8D6EDE4C242FAE9000608E89 /* AppDelegate.m in Sources */,
 				8D669A4D24375FB10014DCE6 /* KxMovieGLView.m in Sources */,
 				8D6EDE5D242FAE9100608E89 /* main.m in Sources */,
-				8D6EDE4F242FAE9000608E89 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8D6EDE53242FAE9000608E89 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8D6EDE54242FAE9000608E89 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8D6EDE58242FAE9100608E89 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
